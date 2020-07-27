@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "622967481122",
+    "firebase_url": "https://chatting-app-c3750.firebaseio.com",
+    "project_id": "chatting-app-c3750",
+    "storage_bucket": "chatting-app-c3750.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622967481122:android:e343e1f79fb227826bfb7b",
+        "android_client_info": {
+          "package_name": "com.daviddev.chat_with_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622967481122-u9cjf5r5ea6ird3ene92v72gikp7lfoe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo7OsM84npXK53Dxe156Swfwl9BR-3H2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622967481122-u9cjf5r5ea6ird3ene92v72gikp7lfoe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
