@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -13,7 +14,8 @@ class _UserImagePickerWidgetState extends State<UserImagePickerWidget> {
   File imageFile;
   final picker = ImagePicker();
   void pickImage() async {
-    final file = await picker.getImage(source: ImageSource.camera);
+    final file =
+        await picker.getImage(source: ImageSource.camera, imageQuality: 50);
     if (file != null) {
       setState(() {
         imageFile = File(file.path);

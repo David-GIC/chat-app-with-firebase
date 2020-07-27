@@ -38,6 +38,8 @@ class Messages extends StatelessWidget {
                       key: ValueKey(
                           chatSnapshot.data.documents[index].documentID),
                       username: chatSnapshot.data.documents[index]['username'],
+                      userImage: chatSnapshot.data.documents[index]
+                          ['userImage'],
                     ),
                   );
                 });

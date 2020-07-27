@@ -32,11 +32,13 @@ class _AuthPageState extends State<AuthPage> {
             .ref()
             .child('user_image')
             .child(authResult.user.uid + '.jpg');
-        ref.putFile(file);
+        await ref.putFile(file).onComplete;
+        final imageURL = await ref.getDownloadURL();
         Firestore.instance
             .collection('users')
             .document(authResult.user.uid)
-            .setData({'username': username, 'email': email});
+            .setData(
+                {'username': username, 'email': email, 'image_url': imageURL});
       }
     } on PlatformException catch (e) {
       var message = 'An error occurred, please check your credentials!';

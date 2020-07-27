@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 
 class NewMessage extends StatefulWidget {
   @override
@@ -20,6 +20,7 @@ class _NewMessageState extends State<NewMessage> {
       'text': enterMessage,
       'createdAt': DateTime.now(),
       'userId': user.uid,
+      'userImage': userData['image_url'],
       'username': userData['username']
     });
     controller.clear();
