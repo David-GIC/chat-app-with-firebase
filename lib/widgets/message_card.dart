@@ -21,9 +21,7 @@ class MessageCard extends StatelessWidget {
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
-                color: isMe
-                    ? Colors.pinkAccent[200]
-                    : Theme.of(context).accentColor,
+                color: isMe ? Colors.grey[400] : Theme.of(context).accentColor,
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(12),
                     topRight: Radius.circular(12),
@@ -34,21 +32,24 @@ class MessageCard extends StatelessWidget {
               ),
               width: 140,
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
-              margin: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+              margin: EdgeInsets.symmetric(vertical: 16, horizontal: 8),
               child: Column(
                 crossAxisAlignment:
                     !isMe ? CrossAxisAlignment.start : CrossAxisAlignment.end,
                 children: <Widget>[
                   Text(
                     username,
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(
+                        color: !isMe ? Colors.white : Colors.black,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 5,
                   ),
                   Text(
                     message,
-                    style: TextStyle(color: Colors.white),
+                    style:
+                        TextStyle(color: !isMe ? Colors.white : Colors.black),
                   ),
                 ],
               ),
